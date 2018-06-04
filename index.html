@@ -6,34 +6,59 @@
 
 <body>
 
-    <header><h1 class = "center themed">Guessing Game</h1></header>
+    <header class = "background"><h1 id = "page-title" class = "center themed">Guessing Game</h1></header>
 
     <section class="app">
 
-        <h3 class = "center themed">Guess a number from 1 to 100</h3>
+        <h3 id = "instructions" class = "center themed">Guess a number from 1 to 100</h3>
 
         <div id = "gameplay">
-            <ul>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-                <li id="input-box" class = "guess"><input id="player-input" class = "center" placeholder="Enter #" maxlength="3" autofocus=autofocus></li>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-                <li class="guess">#</li>
-            </ul>
-            <button type="button" class="center">Guess!</button>
+            <div class = "too-low">
+                <div class = "vertical-aligner center themed">Too low!</div>
+                <div class="guess">
+                ##
+                </div><div class="guess">
+                ##
+                </div><div class="guess">
+                ###
+                </div><div class="guess">
+                ##
+                </div><div class="guess">
+                #
+                </div>
+                <div class = "vertical-aligner"></div>
+            </div>
+            <div id = "input-box">
+                <div class = "vertical-aligner center themed">
+                    You got it!
+                </div>
+                <input id="player-input" class = "center" placeholder="Enter #" maxlength="3" autofocus=autofocus>
+                <div class = "vertical-aligner">
+                    <button id = "guess-button" type="button" class="center page-center">Guess!</button>
+                </div>
+            </div>
+            <div class = "too-high">
+                <div class = "vertical-aligner center themed">Too high!</div>   
+                <div class="guess">
+                ##
+                </div><div class="guess">
+                #
+                </div><div class="guess">
+                ##
+                </div><div class="guess">
+                ##
+                </div><div class="guess">
+                ##
+                </div>
+                <div class = "vertical-aligner">
+                </div>
+            </div>
         </div>
         <div class = "scores">
-            <span>Current guess count: ###</span>
-            <span>Your "low" score: ###</span>
+            <p class = "page-center themed">Current guess count: <strong>##</strong></p>
+            <p class = "page-center themed">Your "low" score: <strong>#</strong></p>
         </div>
-        <div class = "actions">
-            <!-- contains the buttons -->
+        <div class = "actions page-center">
             <button type="button">New Game</button>
             <button type="button">Get Hint</button>
             <button type="button">Reset Scores</button>
@@ -41,9 +66,8 @@
         </div>
     </section>
     <footer>
-        <!-- contains footer info -->
         <img src="fa-logo@2x_preview.png" alt="Fullstack Logo">
-        <h5>Project by Tom Licitra</h5>
+        <h2 class = "themed">Project by Tom Licitra</h5>
     </footer>
 </body>
 

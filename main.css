@@ -1,9 +1,75 @@
 /* this is a comment in css */
 
+html {
+    box-sizing: 'border-box';
+  }
+
+.app {
+    display: block;
+    overflow: auto;
+    margin-bottom: 100px;
+}
+
+#guess-button {
+    height: 70%;
+    width: 70%;
+    background-color: #295878;
+    color: white;
+}
+
+#player-input {
+    font-size: 5vh;
+    height: 50%;
+}
+
+#instructions {
+    padding: 20px;
+}
+
+#gameplay:after {
+    content: "";
+    display: table;
+}
+
+#gameplay:after {
+    clear: both;
+}
+
+#gameplay {
+clear: both;
+*zoom: 1;
+width: 100%;
+height: 35%;
+margin: 0px;
+padding: 0px;
+border: 1px;
+border-color: black;
+}
+  
+#page-title {
+    color: white;
+}
+
+header {
+    padding: 20px;
+}
+
 .center {
     text-align: center;
+    align-items: center;
+}
+
+.background {
+    background-color: #295878
+}
+
+.page-center {
+    text-align: center;
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .themed {
@@ -11,19 +77,88 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-li {
+.too-low {
     float: left;
+    width: 42%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: table-cell;
+
+}
+
+.too-high {
+    float: right;
+    width: 42%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 .guess {
-    list-style: none;
+    width: 20%;
+    height: 20%;
+    margin: 0px;
+    text-align: center;
+    display: inline-block;
+    font-size: 5vh;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+#input-box {
+    float: left;
+    width: 16%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
+#player-input {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0px;
+    padding: 0px;
+}
+.vertical-aligner {
+    height: 42%;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 4vh;
+}
+
+#input-box .vertical-aligner {
+    height: 25%;
+}
+
+footer {
+    display: block;
+    position: fixed;
+    width: 99%;
+    height: 100px;
+    clear: both;
+    background-color: lightgrey;
+    bottom: 0px;
+}
+
+img {
+    height: 100px;
+    width: 300px;
+    float: right;
+    margin-right: 10px;
+}
+
+h2.themed {
+    float: left;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.actions {
+    margin: 20px;
+}
+
+button {
+    font-size: 2vh;
+}
