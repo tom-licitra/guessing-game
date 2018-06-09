@@ -2,13 +2,14 @@
 <head>
     <title>Guessing Game</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
 <body>
 
     <header class = "background"><h1 id = "page-title" class = "center themed">Guessing Game</h1></header>
 
-    <section class="app">
+    <section class="app container">
 
         <h3 id = "instructions" class = "center themed">Guess a number from 1 to 100</h3>
 
@@ -34,7 +35,7 @@
                 </div>
                 <input id="player-input" class = "center" placeholder="Enter #" maxlength="3" autofocus=autofocus>
                 <div class = "vertical-aligner">
-                    <button id = "guess-button" type="button" class="center page-center">Guess!</button>
+                    <button id = "guess-button" type="button" class="page-center">Guess!</button>
                 </div>
             </div>
             <div class = "too-high">
@@ -59,15 +60,18 @@
             <p class = "page-center themed">Your "low" score: <strong>#</strong></p>
         </div>
         <div class = "actions page-center">
-            <button type="button">New Game</button>
-            <button type="button">Get Hint</button>
-            <button type="button">Reset Scores</button>
+            <button type="button" class="btn btn-default btn-sm">New Game</button>
+            <button type="button" class="btn btn-default btn-sm">Get Hint</button>
+            <button type="button" class="btn btn-default btn-sm">Reset Scores</button>
 
         </div>
     </section>
     <footer>
-        <img src="fa-logo@2x_preview.png" alt="Fullstack Logo">
-        <h2 class = "themed">Project by Tom Licitra</h5>
+        <ul class = "row">
+            <li class = "col-md-4"><img id="fs-logo" class="page-center" src="fa-logo@2x_preview.png" alt="Fullstack Logo"></li>
+            <li class = "col-md-4"><h2 class = "themed center">Project by Tom Licitra</h2></li>
+            <li class = "col-md-4"><img id="gh-logo" class="page-center" src ="grace_hopper_academy_preview.png" alt="Grace Hopper Logo"></li>
+        </ul>
     </footer>
 </body>
 
