@@ -1,0 +1,75 @@
+
+<html>
+<head>
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="main.1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class = "background"><h1 id = "page-title" class = "center themed">Guessing Game</h1></header>
+
+    <section class="app container">
+
+        <h2 id = "instructions">Guess a number from 1 to 100</h3>
+        
+        <h3 id = "submission-return">Take your best guess!</h3>
+
+        <div class = "gameplay">
+            <div class = "too-low outer-big">
+                <div class="guess">
+                </div><div class="guess">
+                </div><div class="guess">
+                </div><div class="guess">
+                </div><div class="guess"> 
+                </div>
+            </div>
+            <div id = "input-box" class = "inner-big">
+                <input id="player-input" placeholder="Enter #" maxlength="3" autofocus=autofocus>
+            </div>
+            <div class = "too-high outer-big"> 
+                <div class="guess">
+                </div><div class="guess">
+                </div><div class="guess">
+                </div><div class="guess">
+                </div><div class="guess">
+                </div>
+            </div>
+        </div>
+        <div class = "gameplay">
+            <div class = "outer-small">
+                <p id = "low-response">Too low!</p>
+            </div>
+            <div class = "inner-small">
+                <button id = "guess-button" type="button" class="page-center">Guess!</button>
+            </div>
+            <div class = "outer-small">
+                <p id = "low-response">Too low!</p>
+            </div>
+        </div>
+        <div class = "scores">
+            <p class = "page-center">Current guess count: <strong id="guess-count"></strong></p>
+            <p class = "page-center">Your "low" score: <strong id="record-score"></strong></p>
+        </div>
+        <div class = "actions">
+            <button id="new-game" type="button" class="btn btn-default btn-sm">New Game</button>
+            <button id="get-hint" type="button" class="btn btn-default btn-sm">Get Hint</button>
+            <button id="reset-scores" type="button" class="btn btn-default btn-sm">Reset Score</button>
+        </div>
+    </section>
+    <footer>
+        <ul class = "row">
+            <li class = "col-md-4"><img id="fs-logo" src="fa-logo@2x_preview.png" alt="Fullstack Logo"></li>
+            <li class = "col-md-4"><h2>Project by Tom Licitra</h2></li>
+            <li class = "col-md-4"><img id="gh-logo" src ="grace_hopper_academy_preview.png" alt="Grace Hopper Logo"></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="GuessingGame-Part2/GuessingGame.js"></script>
+
+</body>
+
+
+</html>

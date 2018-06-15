@@ -78,6 +78,12 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.winner{
+    color: white;
+    background-color: darkgreen;
+    font-size: 6vh;
+}
+
 .too-low {
     float: left;
     width: 42%;
@@ -132,6 +138,7 @@ header {
 #input-box .vertical-aligner {
     height: 25%;
     padding-top: 10px;
+    font-size: 2vh;
 }
 
 footer {

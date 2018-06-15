@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <title>Guessing Game</title>
@@ -15,23 +16,18 @@
 
         <div id = "gameplay">
             <div class = "too-low">
-                <div class = "vertical-aligner center themed">Too low!</div>
+                <div id = "low-response" class = "vertical-aligner center themed"></div>
                 <div class="guess">
-                ##
                 </div><div class="guess">
-                ##
                 </div><div class="guess">
-                ###
                 </div><div class="guess">
-                ##
-                </div><div class="guess">
-                #
+                </div><div class="guess"> 
                 </div>
                 <div class = "vertical-aligner"></div>
             </div>
             <div id = "input-box">
-                <div class = "vertical-aligner center themed">
-                    You got it!
+                <div id="submission-return" class = "vertical-aligner center themed">
+                    Take your best guess!
                 </div>
                 <input id="player-input" class = "center" placeholder="Enter #" maxlength="3" autofocus=autofocus>
                 <div class = "vertical-aligner">
@@ -39,30 +35,25 @@
                 </div>
             </div>
             <div class = "too-high">
-                <div class = "vertical-aligner center themed">Too high!</div>   
+                <div id = "high-response" class = "vertical-aligner center themed"></div>   
                 <div class="guess">
-                ##
                 </div><div class="guess">
-                #
                 </div><div class="guess">
-                ##
                 </div><div class="guess">
-                ##
                 </div><div class="guess">
-                ##
                 </div>
                 <div class = "vertical-aligner">
                 </div>
             </div>
         </div>
         <div class = "scores">
-            <p class = "page-center themed">Current guess count: <strong>##</strong></p>
-            <p class = "page-center themed">Your "low" score: <strong>#</strong></p>
+            <p class = "page-center themed">Current guess count: <strong id="guess-count"></strong></p>
+            <p class = "page-center themed">Your "low" score: <strong id="record-score"></strong></p>
         </div>
         <div class = "actions page-center">
-            <button type="button" class="btn btn-default btn-sm">New Game</button>
-            <button type="button" class="btn btn-default btn-sm">Get Hint</button>
-            <button type="button" class="btn btn-default btn-sm">Reset Scores</button>
+            <button id="new-game" type="button" class="btn btn-default btn-sm">New Game</button>
+            <button id="get-hint" type="button" class="btn btn-default btn-sm">Get Hint</button>
+            <button id="reset-scores" type="button" class="btn btn-default btn-sm">Reset Score</button>
 
         </div>
     </section>
@@ -73,6 +64,11 @@
             <li class = "col-md-4"><img id="gh-logo" class="page-center" src ="grace_hopper_academy_preview.png" alt="Grace Hopper Logo"></li>
         </ul>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="GuessingGame-Part2/GuessingGame.js"></script>
+
 </body>
+
 
 </html>
