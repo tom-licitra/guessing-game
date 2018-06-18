@@ -2,33 +2,33 @@
 <html>
 <head>
     <title>Guessing Game</title>
-    <link rel="stylesheet" href="main.1.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.1.css">
 </head>
 
 <body>
 
-    <header class = "background"><h1 id = "page-title" class = "center themed">Guessing Game</h1></header>
+    <header class = "background">
+        <h1 id = "page-title" class = "center themed">Guessing Game</h1>
+    </header>
 
-    <section class="app container">
+    <section id= "app" class= "container">
 
-        <h2 id = "instructions">Guess a number from 1 to 100</h3>
+        <h2 id = "instructions" class = "center themed">Guess a number from 1 to 100</h3>
         
-        <h3 id = "submission-return">Take your best guess!</h3>
+        <h3 id = "submission-return" class = "center themed"><b>Take your best guess!</b></h3>
 
-        <div class = "gameplay">
-            <div class = "too-low outer-big">
+        <div class = "gameplay tall">
+            <div class = "too-low outer flex-container">
                 <div class="guess">
                 </div><div class="guess">
                 </div><div class="guess">
                 </div><div class="guess">
                 </div><div class="guess"> 
                 </div>
-            </div>
-            <div id = "input-box" class = "inner-big">
+            </div><div id = "input-box" class = "inner">
                 <input id="player-input" placeholder="Enter #" maxlength="3" autofocus=autofocus>
-            </div>
-            <div class = "too-high outer-big"> 
+            </div><div class = "too-high outer flex-container"> 
                 <div class="guess">
                 </div><div class="guess">
                 </div><div class="guess">
@@ -37,37 +37,37 @@
                 </div>
             </div>
         </div>
-        <div class = "gameplay">
-            <div class = "outer-small">
-                <p id = "low-response">Too low!</p>
+        <div class = "gameplay short">
+            <div class = "outer">
+                <p id = "low-response" class = "themed"></p>
             </div>
-            <div class = "inner-small">
+            <div class = "inner">
                 <button id = "guess-button" type="button" class="page-center">Guess!</button>
             </div>
-            <div class = "outer-small">
-                <p id = "low-response">Too low!</p>
+            <div class = "outer">
+                <p id = "high-response" class = "themed"></p>
             </div>
         </div>
         <div class = "scores">
-            <p class = "page-center">Current guess count: <strong id="guess-count"></strong></p>
-            <p class = "page-center">Your "low" score: <strong id="record-score"></strong></p>
+            <p class = "page-center themed">Current guess count: <strong id="guess-count"></strong></p>
+            <p class = "page-center themed">Your "low" score: <strong id="record-score"></strong></p>
         </div>
-        <div class = "actions">
+        <div class = "actions page-center">
             <button id="new-game" type="button" class="btn btn-default btn-sm">New Game</button>
             <button id="get-hint" type="button" class="btn btn-default btn-sm">Get Hint</button>
             <button id="reset-scores" type="button" class="btn btn-default btn-sm">Reset Score</button>
         </div>
     </section>
     <footer>
-        <ul class = "row">
-            <li class = "col-md-4"><img id="fs-logo" src="fa-logo@2x_preview.png" alt="Fullstack Logo"></li>
-            <li class = "col-md-4"><h2>Project by Tom Licitra</h2></li>
-            <li class = "col-md-4"><img id="gh-logo" src ="grace_hopper_academy_preview.png" alt="Grace Hopper Logo"></li>
-        </ul>
+        <div class = "flex-container">
+            <div class = "footer-section flex-container"><img id="fs-logo" class="page-center" src="fa-logo@2x_preview.png" alt="Fullstack Logo"></div>
+            <div class = "footer-section flex-container name"><h2 class = "themed page-center">Project by Tom Licitra</h2></div>
+            <div class = "footer-section flex-container"><img id="gh-logo" class="page-center" src ="grace_hopper_academy_preview.png" alt="Grace Hopper Logo"></div>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="GuessingGame-Part2/GuessingGame.js"></script>
+    <script src="GuessingGame.js"></script>
 
 </body>
 

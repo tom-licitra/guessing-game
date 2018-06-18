@@ -74,7 +74,7 @@ Game.prototype.checkGuess = function(){
     }
     else{
         this.tooHighGuesses.push(this.playersGuess);
-        this.tooHighGuesses.sort(function(a,b){return b-a});
+        this.tooHighGuesses.sort(function(a,b){return a-b});
     };
 
     if(this.pastGuesses.length >= 10){
@@ -114,7 +114,7 @@ function newGame(){
     return new Game();
 }
 
-// generate a winning number on page load
+// on page load
 $(document).ready(function(){
 
     let currGame = new Game();
@@ -142,6 +142,8 @@ $(document).ready(function(){
             $('#player-input').addClass("winner");
             $('#player-input').val(num);
             $('#guess-button').prop("disabled",true);
+            $('#player-input').prop("disabled",true);
+            $('#get-hint').prop("disabled",true);
 
         }
         else if(currGame.isLower() > 0){
@@ -154,17 +156,17 @@ $(document).ready(function(){
     }
 
     let refreshPrevGuesses = function(){
-        $('.too-low .guess').first().text(currGame.tooLowGuesses[Math.max(0,currGame.tooLowGuesses.length-5)]);
-        $('.too-low .guess').first().next().text(currGame.tooLowGuesses[Math.max(1,currGame.tooLowGuesses.length-4)]);
-        $('.too-low .guess').first().next().next().text(currGame.tooLowGuesses[Math.max(2,currGame.tooLowGuesses.length-3)]);
-        $('.too-low .guess').last().prev().text(currGame.tooLowGuesses[Math.max(3,currGame.tooLowGuesses.length-2)]);
-        $('.too-low .guess').last().text(currGame.tooLowGuesses[Math.max(4,currGame.tooLowGuesses.length-1)]);
+        $('.too-low .guess').last().text(currGame.tooLowGuesses[currGame.tooLowGuesses.length-1]);
+        $('.too-low .guess').last().prev().text(currGame.tooLowGuesses[currGame.tooLowGuesses.length-2]);
+        $('.too-low .guess').first().next().next().text(currGame.tooLowGuesses[currGame.tooLowGuesses.length-3]);
+        $('.too-low .guess').first().next().text(currGame.tooLowGuesses[currGame.tooLowGuesses.length-4]);
+        $('.too-low .guess').first().text(currGame.tooLowGuesses[currGame.tooLowGuesses.length-5]);
 
-        $('.too-high .guess').last().text(currGame.tooHighGuesses[Math.max(0,currGame.tooHighGuesses.length-5)]);
-        $('.too-high .guess').last().prev().text(currGame.tooHighGuesses[Math.max(1,currGame.tooHighGuesses.length-4)]);
-        $('.too-high .guess').last().prev().prev().text(currGame.tooHighGuesses[Math.max(2,currGame.tooHighGuesses.length-3)]);
-        $('.too-high .guess').first().next().text(currGame.tooHighGuesses[Math.max(3,currGame.tooHighGuesses.length-2)]);
-        $('.too-high .guess').first().text(currGame.tooHighGuesses[Math.max(4,currGame.tooHighGuesses.length-1)]);
+        $('.too-high .guess').first().text(currGame.tooHighGuesses[0]);
+        $('.too-high .guess').first().next().text(currGame.tooHighGuesses[1]);
+        $('.too-high .guess').last().prev().prev().text(currGame.tooHighGuesses[2]);
+        $('.too-high .guess').last().prev().text(currGame.tooHighGuesses[3]);
+        $('.too-high .guess').last().text(currGame.tooHighGuesses[4]);
 
     }
 
@@ -179,8 +181,8 @@ $(document).ready(function(){
         $('#player-input').val('');
         $('#player-input').focus();
         $('#guess-button').prop("disabled",false);
-
-
+        $('#player-input').prop("disabled",false);
+        $('#get-hint').prop("disabled",false);
     }
 
     $('#guess-button').on('click', function(){
